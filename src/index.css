@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #edeff2;
+  font-family: "Lato", sans-serif;
+}
+
+.card {
+  @apply font-medium w-full mb-2 px-3 lg:px-4 py-3 bg-white shadow-gray-400 rounded-md shadow-md;
+}
+
+.card a{
+  @apply transition-all duration-100 ease-out;
+}
+
+.card .barlinks span,
+.card .active span {
+  @apply lg:block hidden;
+}
+
+.inputbox {
+  @apply my-[30px] mx-0 border-b-2 relative w-[310px];
+}
+
+.inputbox label {
+  @apply absolute left-[5px] pointer-events-none transition-all duration-200 top-[50%] translate-y-[-50%];
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+  @apply top-[2px];
+}
+.inputbox input {
+  @apply bg-transparent h-[50px] w-[100%] border-none outline-none pl-[5px] pr-[5px];
+}
+
+.buttonlogin {
+  background: linear-gradient(
+    90deg,
+    rgba(35, 117, 233, 1) 0%,
+    rgba(35, 153, 244, 1) 38%,
+    rgba(237, 0, 255, 1) 100%
+  );
+  transition: all ease-out 100ms;
+}
+
+.buttonlogin:hover {
+  opacity: 0.8;
+  scale: 103%;
+  color: rgb(220, 239, 252);
+}
+
+.active {
+  @apply bg-primarydark text-white font-semibold shadow-sm shadow-gray-700 items-center justify-center flex w-full lg:justify-start gap-2 py-4 rounded-md px-3 scale-105 lg:px-8 transition-all duration-150 ease-linear;
+}
+
+.barlinks {
+  @apply items-center justify-center flex w-full lg:justify-start gap-2 py-4 rounded-md px-3 lg:px-8 transition-all duration-150 ease-linear hover:bg-blue-200 hover:shadow-sm hover:scale-105;
+}
